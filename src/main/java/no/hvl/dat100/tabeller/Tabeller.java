@@ -7,6 +7,8 @@ public class Tabeller {
 
 		// TODO
 		throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
+		
+		hfis
 
 	}
 
