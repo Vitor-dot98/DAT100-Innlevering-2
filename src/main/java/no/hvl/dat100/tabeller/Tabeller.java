@@ -3,14 +3,26 @@ package no.hvl.dat100.tabeller;
 public class Tabeller {
 
 	// a)
+	
+	int tabell [] = {2,4,6,8,10};
+
+    skrivUt(tabell);
+
+
 	public static void skrivUt(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
-		
-		hfis
-
+		for (int i = 0; i < tabell.length; i++) {
+			
+			
+			System.out.println(tabell[i]);
+			
+			System.out.println();
+		}
+		return;
 	}
+	
+
+	
+
 
 	// b)
 	public static String tilStreng(int[] tabell) {
@@ -62,4 +74,5 @@ public class Tabeller {
 		throw new UnsupportedOperationException("Metoden settSammen ikke implementert");
 
 	}
+
 }
