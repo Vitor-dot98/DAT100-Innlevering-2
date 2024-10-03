@@ -1,5 +1,5 @@
-package no.hvl.dat100.tabeller;
-import static javax.swing.JOptionPane.*;
+//package no.hvl.dat100.tabeller;
+
 public class Tabeller {
 
 	
@@ -26,7 +26,8 @@ summer(tabell);
 finnesTall(tabell, 3);
 System.out.println();
 
-	
+
+posisjonTall(tabell, 7);
 	}
 	
 	
@@ -83,17 +84,18 @@ System.out.println();
 // d)	    
 	    
 	public static boolean finnesTall(int[] tabell, int tall) {
-for (int i = 0; i < tabell.length; i++) {
-	
+for (int i = 0; i < tabell.length -1; i++) {
 	
 	if (tall == tabell[i]) {
-		return true; }
-}
-	
+		
+		System.out.print(tall);		
+		}
+	else if (tall < 0 || tall > tabell.length) {
+		System.out.print("må være et positivt tall fra 0 til " + tabell.length + - 1);
+	}
+	}
 		return false;
-	
-
-}
+	}
 	
 	
 	// TODO throw new UnsupportedOperationException("Metoden finnesTall ikke implementert");
@@ -104,9 +106,17 @@ for (int i = 0; i < tabell.length; i++) {
 // e)
 	
 	public static int posisjonTall(int[] tabell, int tall) {
+		
+		for (int i = 0; i < tabell.length; i ++) {
+			if (tall == i) {
+				System.out.print(tabell[i]);
+				tall = tabell[i];
+				break;
+			}
+		}
+		return tall;
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden posisjonTall ikke implementert");
+		
 	}
 
 	
