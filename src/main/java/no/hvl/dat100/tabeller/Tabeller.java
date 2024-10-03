@@ -5,11 +5,22 @@ public class Tabeller {
 	// a)
 	public static void main(String[]args) {
 	int tabell [] = {1,2,3,4,5,6};
-    skrivUt(tabell);
-    
-    int tabell2[] = {42,67,89};
 	
-	System.out.println(tilStreng(tabell2));
+	 int tabell2[] = {42,67,89};
+	 
+	 
+    skrivUt(tabell);
+    System.out.println();
+    
+    System.out.println(tilStreng(tabell2));
+    System.out.println(); 
+
+    
+    System.out.print("Summen av tallene i tabellen er: ");
+    summer(tabell);
+    System.out.println();
+	
+
     }
 
 	public static void skrivUt(int[] tabell) {
@@ -42,13 +53,27 @@ public class Tabeller {
 			sb.append("]");
 			return sb.toString();
 			
-	
 	}
-	// c)
-	public static int summer(int[] tabell) {
+	
+	
+	//c)
+	
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden summer ikke implementert");
+	    private static int sum = 0;
+
+	    public static int summer(int[] tabell) {
+	        for (int i = 0; i < tabell.length; i++)
+	            sum += tabell[i];  
+
+	        System.out.println(sum); 
+	        return sum;
+	
+
+		
+		
+		
+		
+		// TODO throw new UnsupportedOperationException("Metoden summer ikke implementert");
 	}
 
 	// d)
