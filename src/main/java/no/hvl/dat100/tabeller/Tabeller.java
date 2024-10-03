@@ -23,8 +23,8 @@ summer(tabell);
 	
     
     System.out.println("Finnes tallet i tabellen?");
-finnesTall(tabell, 3);
-System.out.println();
+boolean svar = finnesTall(tabell, 3);
+System.out.println(svar);
 
 	
 	}
@@ -87,7 +87,8 @@ for (int i = 0; i < tabell.length; i++) {
 	
 	
 	if (tall == tabell[i]) {
-		return true; }
+		return true; 
+		}
 }
 	
 		return false;
