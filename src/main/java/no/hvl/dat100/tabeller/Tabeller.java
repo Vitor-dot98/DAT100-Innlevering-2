@@ -23,8 +23,8 @@ summer(tabell);
 	
     
     System.out.println("Finnes tallet i tabellen?");
-finnesTall(tabell, 3);
-System.out.println();
+boolean svar = finnesTall(tabell, 3);
+System.out.println(svar);
 
 
 posisjonTall(tabell, 7);
@@ -94,6 +94,10 @@ for (int i = 0; i < tabell.length -1; i++) {
 		System.out.print("må være et positivt tall fra 0 til " + tabell.length + - 1);
 	}
 	}
+
+		
+
+	
 		return false;
 	}
 	
@@ -135,12 +139,16 @@ for (int i = 0; i < tabell.length -1; i++) {
 	
 	public static boolean erSortert(int[] tabell) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden erSortert ikke implementert");
+		for (int i = 0; i < tabell.length;i++) {
+		
+		if (tabell[i] < tabell [i- 1] ) {
+		
+		  return false;
+		}
 	}
-
 	
-	
+	      return true;
+	}
 // h)
 	
 	public static int[] settSammen(int[] tabell1, int[] tabell2) {
