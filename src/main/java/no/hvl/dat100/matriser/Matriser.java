@@ -1,7 +1,19 @@
 package no.hvl.dat100.matriser;
 
 public class Matriser {
+	public static void main (String[] args) {
+	int [][] matrise = {
+			{1,3,5},
+			{6,11,16},
+			{12,20,28}
+	};
+	
+	
+	
+	skrivUt(matrise);
+}
 
+	
 	// a)
 	public static void skrivUt(int[][] matrise) {
 		
@@ -13,11 +25,6 @@ public class Matriser {
 		}
 	}
 		
-	int [][] matrise = {
-			{1,3,5},
-			{6,11,16},
-			{12,20,28}
-	};
 
 
 	// b)
