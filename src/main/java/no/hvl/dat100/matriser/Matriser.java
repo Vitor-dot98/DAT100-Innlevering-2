@@ -15,7 +15,19 @@ public class Matriser {
 	
 	int[][] skalert = skaler(8, matrise);
 	
+	int [][] matrise2 = {
+			{1,2,3},
+			{4,5,6},
+			{7,8,9}
+			
+	};
 	
+	
+	
+	
+	
+	String resultat = tilStreng(matrise2);
+			System.out.println(resultat);
 	
 	
 }
@@ -35,13 +47,13 @@ public class Matriser {
 
 
 	// b)
-	public static String tilStreng(int[][] matrise) {
+	public static String tilStreng(int[][] matrise2) {
 		String resultat = "";
-	   for (int i = 0;i < matrise.length;i++) {
-	   for (int j = 0; j < matrise.length;j++) {
-         resultat +=  matrise[i][j];
+	   for (int i = 0;i < matrise2.length;i++) {
+	   for (int j = 0; j < matrise2.length;j++) {
+         resultat +=  matrise2[i][j];
          
-          if (j < matrise[i].length - 1) {
+          if (j < matrise2.length - 1) {
 		 resultat += " ";
           }
 	   }
@@ -49,17 +61,11 @@ public class Matriser {
 	   }
 	   return resultat;
 	}
-        	  int [][] matrise = {
-				{1,2,3},
-				{4,5,6},
-				{7,8,9}
-				
-		};
-			String resultat = tilStreng(matrise);
-			System.out.println(resultat);
+        	  
 		
-     }
-}
+		
+     
+
 
 
 	// c)
