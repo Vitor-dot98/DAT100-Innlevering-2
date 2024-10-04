@@ -15,11 +15,11 @@ public class Tabeller {
 		}
 	 
 skrivUt(tabell);
-    System.out.println();
+    //System.out.println();
     
     
 System.out.println(tilStreng(tabell2));
-    System.out.println(); 
+    //System.out.println(); 
 
     
     System.out.print("Summen av tallene i tabellen er: ");
@@ -130,14 +130,23 @@ reverser(tabell);
 // f)
 	
 	public static int[] reverser(int[] tabell) {
+		int[] tabell2 = new int[tabell.length];
+		int b = 0;
+		for (int i = tabell.length -1; i >= 0; i--) {
+			int a = tabell[i];
+			//System.out.println(a);
 
-		for (int i = tabell.length - 1; i != 0; i --) {
-			//int a = tabell[i];
+			//System.out.println(tabell[a]);
+
+
+			
+			tabell2[b] = a;
+
+			b ++;
+			}
+		tabell = tabell2;
+		for (int i = 0; i < tabell.length; i++) {
 			System.out.println(tabell[i]);
-
-			//int b = 0;
-			//tabell[b] = a;
-			//b++;
 		}
 
 		return tabell;
