@@ -35,10 +35,12 @@ System.out.println();
 
 System.out.println();
 boolean sortert = erSortert(tabell);
+System.out.println();
 
 System.out.println("Hva er posisjonen til tallet?: ");
 posisjonTall(tabell, 4);
 System.out.println();
+
 System.out.println();
 
 
@@ -128,7 +130,7 @@ System.out.println();
 		
 		for (int i = 0; i < tabell.length; i ++) {
 			if (tall == i) {
-				System.out.print("verdien til posisjon "+ i + " er " + tabell[i]);
+				System.out.println("verdien til posisjon "+ i + " er " + tabell[i]);
 				tall = tabell[i];
 				break;
 			}
