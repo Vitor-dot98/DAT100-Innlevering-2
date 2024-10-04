@@ -13,7 +13,7 @@ public class Matriser {
 	skrivUt(matrise);
 	System.out.println();
 	
-	//int[][] skalert = skaler(8, matrise);
+	skaler(8, matrise);
 	System.out.println();
 		
 	int [][] matrise2 = {

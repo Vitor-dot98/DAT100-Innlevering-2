@@ -26,6 +26,7 @@ System.out.println();
     
 System.out.println("Finnes tallet i tabellen?");
 boolean svar = finnesTall(tabell, 3);
+System.out.println();
 System.out.println(svar);
 System.out.println();
 
