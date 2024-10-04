@@ -15,11 +15,11 @@ public class Tabeller {
 		}
 	 
 skrivUt(tabell);
-    System.out.println();
+    //System.out.println();
     
     
 System.out.println(tilStreng(tabell2));
-    System.out.println(); 
+    //System.out.println(); 
 
     
     System.out.print("Summen av tallene i tabellen er: ");
@@ -31,8 +31,15 @@ summer(tabell);
 boolean svar = finnesTall(tabell, 3);
 System.out.println(svar);
 
+<<<<<<< HEAD
+=======
+System.out.println();
+boolean sortert = erSortert(tabell);
+System.out.println();
+>>>>>>> 9371f0c7681c76532669c74c78ac0a71d226f7c9
 
 posisjonTall(tabell, 4);
+System.out.println();
 
 reverser(tabell);
 
@@ -113,7 +120,7 @@ reverser(tabell);
 		
 		for (int i = 0; i < tabell.length; i ++) {
 			if (tall == i) {
-				System.out.print("verdien til posisjon "+ i + " er " + tabell[i]);
+				System.out.println("verdien til posisjon "+ i + " er " + tabell[i]);
 				tall = tabell[i];
 				break;
 			}
@@ -128,14 +135,23 @@ reverser(tabell);
 // f)
 	
 	public static int[] reverser(int[] tabell) {
+		int[] tabell2 = new int[tabell.length];
+		int b = 0;
+		for (int i = tabell.length -1; i >= 0; i--) {
+			int a = tabell[i];
+			//System.out.println(a);
 
-		for (int i = tabell.length - 1; i != 0; i --) {
-			//int a = tabell[i];
+			//System.out.println(tabell[a]);
+
+
+			
+			tabell2[b] = a;
+
+			b ++;
+			}
+		tabell = tabell2;
+		for (int i = 0; i < tabell.length; i++) {
 			System.out.println(tabell[i]);
-
-			//int b = 0;
-			//tabell[b] = a;
-			//b++;
 		}
 
 		return tabell;
