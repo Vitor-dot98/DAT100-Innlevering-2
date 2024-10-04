@@ -9,7 +9,7 @@ public class Matriser {
 	};
 	
 	
-	
+	// a)
 	skrivUt(matrise);
 	System.out.println();
 	
@@ -26,16 +26,16 @@ public class Matriser {
 		{7,8,9}
 		
 	};
-	
+	// b)
 	String resultat = tilStreng(matrise2);
 	System.out.println(resultat);
  	System.out.println();
  	
- 	
+ 	// c)
  	skaler(8, matrise);
 	System.out.println();
 	
-	
+	// d)
  	System.out.println(erLik(matrise, matrise2));
  	System.out.println(erLik(matrise3, matrise2));
 		
@@ -45,7 +45,7 @@ public class Matriser {
 	public static void skrivUt(int[][] matrise) {
 		
 		for (int i = 0; i < matrise.length;i++) {
-			for (int j = 0 ; j < matrise.length; j++) {
+			for (int j = 0 ; j < matrise[i].length; j++) {
 				System.out.print(matrise[i][j] + " ");
 			}
 			System.out.println();
@@ -69,11 +69,7 @@ public class Matriser {
 	   	}
 	return resultat;
 	}
-        	  
-		
-		
-     
-
+        	 
 
 
 	// c)
