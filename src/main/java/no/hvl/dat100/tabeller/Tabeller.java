@@ -8,18 +8,14 @@ public class Tabeller {
 	
 	 int tabell2[] = {42,67,89};
 	
-	 if (erSortert(tabell)) {
-			System.out.println("første tabell er stigende");
-		}else {
-			System.out.println("første tabell er ikke stigende");
-		}
 	 
 skrivUt(tabell);
     //System.out.println();
-    
+System.out.println();
     
 System.out.println(tilStreng(tabell2));
     //System.out.println(); 
+System.out.println();
 
     
     System.out.print("Summen av tallene i tabellen er: ");
@@ -36,7 +32,22 @@ System.out.println();
 posisjonTall(tabell, 4);
 System.out.println();
 
+System.out.println("Tabellen reversert blir");
 reverser(tabell);
+System.out.println();
+
+
+if (erSortert(tabell)) {
+	System.out.println("første tabell er stigende");
+}else {
+	System.out.println("første tabell er ikke stigende");
+}
+System.out.println();
+
+
+System.out.println("Tabellene satt sammen gir: ");
+settSammen(tabell, tabell2);
+
 
 	}
 	
@@ -44,10 +55,10 @@ reverser(tabell);
 	
 	public static void skrivUt(int[] tabell) {
 		for (int i = 0; i < tabell.length; i++) {
-			System.out.println(tabell[i]);
-			//System.out.println();
+			System.out.print(tabell[i] + " ");
+			
 		}
-		
+		System.out.println();
 	}
 	
 // b)
@@ -128,9 +139,9 @@ reverser(tabell);
 			}
 		tabell = tabell2;
 		for (int i = 0; i < tabell.length; i++) {
-			System.out.println(tabell[i]);
+			System.out.print(tabell[i] + " ");
 		}
-
+		System.out.println();
 		return tabell;
 		
 	}
@@ -151,11 +162,23 @@ reverser(tabell);
 	
 // h)
 	
-	public static int[] settSammen(int[] tabell1, int[] tabell2) {
+	public static int[] settSammen(int[] tabell, int[] tabell2) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden settSammen ikke implementert");
-
+	int tabellLengde = tabell.length + tabell2.length;
+	int [] nytabell = new int [tabellLengde];
+	
+	for (int i = 0; i < tabell.length; i++) {
+		nytabell[i] = tabell[i];
 	}
-
+	for (int j = 0; j < tabell2.length; j++) {
+		nytabell[tabell.length + j] = tabell2[j];	
+	}
+	for (int s = 0; s < nytabell.length; s++) {
+		System.out.print(nytabell[s] + " ");
+	
+	}
+	System.out.println();
+return nytabell;
+	
+	}
 }
