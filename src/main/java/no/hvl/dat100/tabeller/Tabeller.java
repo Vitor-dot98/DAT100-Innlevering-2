@@ -13,17 +13,18 @@ skrivUt(tabell);
     //System.out.println();
 System.out.println();
     
+
 System.out.println(tilStreng(tabell2));
     //System.out.println(); 
 System.out.println();
 
     
-    System.out.print("Summen av tallene i tabellen er: ");
+System.out.print("Summen av tallene i tabellen er: ");
 summer(tabell);
-    System.out.println();
+System.out.println();
 	
     
-    System.out.println("Finnes tallet i tabellen?");
+System.out.println("Finnes tallet i tabellen?");
 boolean svar = finnesTall(tabell, 3);
 System.out.println(svar);
 
@@ -36,7 +37,7 @@ System.out.println("Tabellen reversert blir");
 reverser(tabell);
 System.out.println();
 
-
+System.out.println("Er tabellen sortert?");
 if (erSortert(tabell)) {
 	System.out.println("første tabell er stigende");
 }else {
@@ -152,7 +153,7 @@ settSammen(tabell, tabell2);
 
 		for (int i = 1; i < tabell.length;i++) {
 	
-			if (tabell[i] < tabell[i-1]) {   // sjekk om nåvarende element er mindre eller lik forrige element
+			if (tabell[i] < tabell[i-1]) {  
 		
 		  return false;
 		}
