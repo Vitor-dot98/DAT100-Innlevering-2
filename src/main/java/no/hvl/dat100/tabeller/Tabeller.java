@@ -10,7 +10,7 @@ public class Tabeller {
 	
 	 if (erSortert(tabell)) {
 			System.out.println("første tabell er stigende");
-		}else {
+	 }else {
 			System.out.println("første tabell er ikke stigende");
 		}
 	 
@@ -31,8 +31,6 @@ summer(tabell);
 boolean svar = finnesTall(tabell, 3);
 System.out.println(svar);
 
-System.out.println();
-boolean sortert = erSortert(tabell);
 
 posisjonTall(tabell, 4);
 
