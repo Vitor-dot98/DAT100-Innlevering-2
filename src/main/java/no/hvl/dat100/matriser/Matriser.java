@@ -13,8 +13,6 @@ public class Matriser {
 	skrivUt(matrise);
 	System.out.println();
 	
-	skaler(8, matrise);
-	System.out.println();
 		
 	int [][] matrise2 = {
 			{1,2,3},
@@ -32,6 +30,10 @@ public class Matriser {
 	String resultat = tilStreng(matrise2);
 	System.out.println(resultat);
  	System.out.println();
+ 	
+ 	
+ 	skaler(8, matrise);
+	System.out.println();
 	
 	
  	System.out.println(erLik(matrise, matrise2));
@@ -99,21 +101,4 @@ public class Matriser {
 		}
 		return true;
 	}
-	
-	// e)
-	public static int[][] speile(int[][] matrise) {
-
-		// TODO
-
-		throw new UnsupportedOperationException("Metoden speile ikke implementert");
-	
-	}
-
-	// f)
-	public static int[][] multipliser(int[][] a, int[][] b) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden multipliser ikke implementert");
-	
-	}
-}
+}	
