@@ -15,7 +15,7 @@ public class Matriser {
 	
 	int[][] skalert = skaler(8, matrise);
 	System.out.println();
-	
+		
 	int [][] matrise2 = {
 			{1,2,3},
 			{4,5,6},
@@ -53,7 +53,7 @@ public class Matriser {
 	public static String tilStreng(int[][] matrise2) {
 		String resultat = "";
 	   for (int i = 0;i < matrise2.length;i++) {
-	   for (int j = 0; j < matrise2.length;j++) {
+	   for (int j = 0; j < matrise2[i].length;j++) {
          resultat +=  matrise2[i][j];
          
           if (j < matrise2.length - 1) {
