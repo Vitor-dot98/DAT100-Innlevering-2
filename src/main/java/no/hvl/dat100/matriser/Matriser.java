@@ -22,28 +22,31 @@ public class Matriser {
 			{7,8,9}
 			
 	};
+	int [][] matrise3 = {
+		{1,2,3},
+		{4,5,6},
+		{7,8,9}
+		
+	};
 	
 	String resultat = tilStreng(matrise2);
 	System.out.println(resultat);
- System.out.println();
+ 	System.out.println();
 	
 	
-	
-	
+ 	System.out.println(erLik(matrise, matrise2));
+ 	System.out.println(erLik(matrise3, matrise2));
+		
+	}
 
-			
-			
-}
-
-	
 	// a)
 	public static void skrivUt(int[][] matrise) {
 		
 		for (int i = 0; i < matrise.length;i++) {
-		for (int j = 0 ; j < matrise.length; j++) {
-			System.out.print(matrise[i][j] + " ");
-			}
-		System.out.println();
+			for (int j = 0 ; j < matrise.length; j++) {
+				System.out.print(matrise[i][j] + " ");
+				}
+			System.out.println();
 		}
 	}
 		
@@ -52,17 +55,17 @@ public class Matriser {
 	// b)
 	public static String tilStreng(int[][] matrise2) {
 		String resultat = "";
-	   for (int i = 0;i < matrise2.length;i++) {
-	   for (int j = 0; j < matrise2[i].length;j++) {
-         resultat +=  matrise2[i][j];
+	   	for (int i = 0;i < matrise2.length;i++) {
+	   		for (int j = 0; j < matrise2[i].length;j++) {
+        		resultat +=  matrise2[i][j];
          
-          if (j < matrise2.length - 1) {
-		 resultat += " ";
-          }
-	   }
-	   resultat +="/n";
-	   }
-	   return resultat;
+          		if (j < matrise2.length - 1) {
+		 			resultat += " ";
+         		}
+	   		}
+	   	resultat +="/n";
+	   	}
+	return resultat;
 	}
         	  
 		
@@ -73,24 +76,28 @@ public class Matriser {
 
 	// c)
 	public static int[][] skaler(int tall, int[][] matrise) {
-int matriseZ [][] = new int [matrise.length][matrise[0].length];
-for (int i = 0; i < matrise.length;i++) {
-	for (int j = 0 ; j < matrise[0].length; j++) {
-		matriseZ[i][j] = matrise[i][j] * tall; 
-		System.out.print(matriseZ[i][j] + " ");
-	}
-	System.out.println();
-	}
-return matriseZ;
-	}
+		int matriseZ [][] = new int [matrise.length][matrise[0].length];
+		for (int i = 0; i < matrise.length;i++) {
+			for (int j = 0 ; j < matrise[0].length; j++) {
+				matriseZ[i][j] = matrise[i][j] * tall; 
+				System.out.print(matriseZ[i][j] + " ");
+				}
+			System.out.println();
+			}
+		return matriseZ;
+		}
 	
 
 	// d)
 	public static boolean erLik(int[][] a, int[][] b) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden erLik ikke implementert");
-		
+		for (int i = 0; i < a.length; i++) {
+			for (int j = 0; j < a[0].length; j++) {
+				if (a[i][j] != b[i][j]) {
+					return false;
+				}
+			}
+		}
+		return true;
 	}
 	
 	// e)
