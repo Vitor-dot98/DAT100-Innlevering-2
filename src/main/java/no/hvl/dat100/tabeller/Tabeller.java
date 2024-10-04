@@ -1,9 +1,9 @@
-//package no.hvl.dat100.tabeller;
+package no.hvl.dat100.tabeller;
 
 public class Tabeller {
 
 	
-	public static void main(String[]args) {
+	public static void main(String[] args) {
 	int tabell [] = {1,2,3,4,5,6};
 	
 	 int tabell2[] = {42,67,89};
@@ -24,12 +24,25 @@ summer(tabell);
     
     System.out.println("Finnes tallet i tabellen?");
 boolean svar = finnesTall(tabell, 3);
+System.out.println();
 System.out.println(svar);
+System.out.println();
 
 
+System.out.println("Hva er posisjonen til tallet?: ");
 posisjonTall(tabell, 4);
+System.out.println();
+System.out.println();
+
 
 reverser(tabell);
+System.out.println();
+
+
+erSortert(tabell);
+System.out.println();
+
+
 
 	}
 	
@@ -128,19 +141,17 @@ reverser(tabell);
 // f)
 	
 	public static int[] reverser(int[] tabell) {
-
-		for (int i = tabell.length - 1; i != 0; i --) {
-			//int a = tabell[i];
-			System.out.println(tabell[i]);
-
-			//int b = 0;
-			//tabell[b] = a;
-			//b++;
+		int tabellsnudd [] = new int [tabell.length];
+		for (int i = tabell.length - 1; i >= 0; i--) {
+			int ny = tabell[i];
+			tabellsnudd[i] = ny;
 		}
-
-		return tabell;
+		return tabellsnudd;
+			
+		}
+			 
 		
-	}
+	
 
 	
 	
