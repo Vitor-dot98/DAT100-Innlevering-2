@@ -26,12 +26,13 @@ System.out.println();
     
 System.out.println("Finnes tallet i tabellen?");
 boolean svar = finnesTall(tabell, 3);
-System.out.println();
 System.out.println(svar);
 System.out.println();
 
 
-posisjonTall(tabell, 4);
+System.out.println("Posisjonen er: ");
+int posisjon = posisjonTall(tabell, 4);
+System.out.println(posisjon);
 System.out.println();
 
 
@@ -87,7 +88,8 @@ settSammen(tabell, tabell2);
 	    private static int sum = 0;
 
 	    public static int summer(int[] tabell) {
-	        for (int i = 0; i < tabell.length; i++)
+	        sum = 0;
+	    	for (int i = 0; i < tabell.length; i++)
 	            sum += tabell[i];  
 
 	        System.out.println(sum); 
@@ -98,16 +100,14 @@ settSammen(tabell, tabell2);
 // d)	    
 	    
 	public static boolean finnesTall(int[] tabell, int tall) {
-		for (int i = 0; i < tabell.length -1; i++) {
+		for (int i = 0; i < tabell.length; i++) {
 			
 			if (tall == tabell[i]) {
 				
-				System.out.print(tall);	
+				
 				return true;
 				}
-			else if (tall < 0 || tall > tabell.length) {
-				System.out.print("må være et positivt tall fra 0 til " + tabell.length + - 1);
-			}
+			
 		}
 		return false;
 	}
@@ -117,13 +117,12 @@ settSammen(tabell, tabell2);
 	public static int posisjonTall(int[] tabell, int tall) {
 		
 		for (int i = 0; i < tabell.length; i ++) {
-			if (tall == i) {
-				System.out.println("verdien til posisjon "+ i + " er " + tabell[i]);
-				tall = tabell[i];
-				break;
+			if (tall == tabell[i]) {
+			
+			return i;
 			}
 		}
-		return tall;
+		return -1;
 	}
 	
 // f)
