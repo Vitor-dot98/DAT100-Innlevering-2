@@ -27,7 +27,10 @@ boolean svar = finnesTall(tabell, 3);
 System.out.println(svar);
 
 
-posisjonTall(tabell, 7);
+posisjonTall(tabell, 4);
+
+reverser(tabell);
+
 	}
 	
 	
@@ -84,20 +87,17 @@ posisjonTall(tabell, 7);
 // d)	    
 	    
 	public static boolean finnesTall(int[] tabell, int tall) {
-for (int i = 0; i < tabell.length -1; i++) {
-	
-	if (tall == tabell[i]) {
-		
-		System.out.print(tall);		
+		for (int i = 0; i < tabell.length -1; i++) {
+			
+			if (tall == tabell[i]) {
+				
+				System.out.print(tall);	
+				return true;
+				}
+			else if (tall < 0 || tall > tabell.length) {
+				System.out.print("må være et positivt tall fra 0 til " + tabell.length + - 1);
+			}
 		}
-	else if (tall < 0 || tall > tabell.length) {
-		System.out.print("må være et positivt tall fra 0 til " + tabell.length + - 1);
-	}
-	}
-
-		
-
-	
 		return false;
 	}
 	
@@ -113,7 +113,7 @@ for (int i = 0; i < tabell.length -1; i++) {
 		
 		for (int i = 0; i < tabell.length; i ++) {
 			if (tall == i) {
-				System.out.print(tabell[i]);
+				System.out.print("verdien til posisjon "+ i + " er " + tabell[i]);
 				tall = tabell[i];
 				break;
 			}
@@ -129,8 +129,17 @@ for (int i = 0; i < tabell.length -1; i++) {
 	
 	public static int[] reverser(int[] tabell) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden reverser ikke implementert");
+		for (int i = tabell.length - 1; i != 0; i --) {
+			//int a = tabell[i];
+			System.out.println(tabell[i]);
+
+			//int b = 0;
+			//tabell[b] = a;
+			//b++;
+		}
+
+		return tabell;
+		
 	}
 
 	
