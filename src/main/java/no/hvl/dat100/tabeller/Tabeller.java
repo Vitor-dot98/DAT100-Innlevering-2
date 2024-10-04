@@ -10,7 +10,7 @@ public class Tabeller {
 	
 	 if (erSortert(tabell)) {
 			System.out.println("første tabell er stigende");
-		}else {
+	 }else {
 			System.out.println("første tabell er ikke stigende");
 		}
 	 
@@ -33,9 +33,12 @@ System.out.println();
 System.out.println(svar);
 System.out.println();
 
+<<<<<<< HEAD
+=======
 System.out.println();
 boolean sortert = erSortert(tabell);
 System.out.println();
+>>>>>>> 9371f0c7681c76532669c74c78ac0a71d226f7c9
 
 System.out.println("Hva er posisjonen til tallet?: ");
 posisjonTall(tabell, 4);
