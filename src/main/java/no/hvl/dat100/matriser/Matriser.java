@@ -11,6 +11,13 @@ public class Matriser {
 	
 	
 	skrivUt(matrise);
+	System.out.println();
+	
+	int[][] skalert = skaler(8, matrise);
+	
+	
+	
+	
 }
 
 	
@@ -37,11 +44,17 @@ public class Matriser {
 
 	// c)
 	public static int[][] skaler(int tall, int[][] matrise) {
-		
-		// TODO
-		throw new UnsupportedOperationException("Metoden skaler ikke implementert");
-	
+int matriseZ [][] = new int [matrise.length][matrise[0].length];
+for (int i = 0; i < matrise.length;i++) {
+	for (int j = 0 ; j < matrise[0].length; j++) {
+		matriseZ[i][j] = matrise[i][j] * tall; 
+		System.out.print(matriseZ[i][j] + " ");
 	}
+	System.out.println();
+	}
+return matriseZ;
+	}
+	
 
 	// d)
 	public static boolean erLik(int[][] a, int[][] b) {
