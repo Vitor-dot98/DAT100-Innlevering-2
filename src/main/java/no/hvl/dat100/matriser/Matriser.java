@@ -13,7 +13,7 @@ public class Matriser {
 	skrivUt(matrise);
 	System.out.println();
 	
-	int[][] skalert = skaler(8, matrise);
+	//int[][] skalert = skaler(8, matrise);
 	System.out.println();
 		
 	int [][] matrise2 = {
@@ -45,7 +45,7 @@ public class Matriser {
 		for (int i = 0; i < matrise.length;i++) {
 			for (int j = 0 ; j < matrise.length; j++) {
 				System.out.print(matrise[i][j] + " ");
-				}
+			}
 			System.out.println();
 		}
 	}
@@ -81,11 +81,11 @@ public class Matriser {
 			for (int j = 0 ; j < matrise[0].length; j++) {
 				matriseZ[i][j] = matrise[i][j] * tall; 
 				System.out.print(matriseZ[i][j] + " ");
-				}
-			System.out.println();
 			}
-		return matriseZ;
+			System.out.println();
 		}
+		return matriseZ;
+	}
 	
 
 	// d)
