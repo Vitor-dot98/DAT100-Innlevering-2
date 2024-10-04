@@ -33,8 +33,10 @@ System.out.println(svar);
 
 System.out.println();
 boolean sortert = erSortert(tabell);
+System.out.println();
 
 posisjonTall(tabell, 4);
+System.out.println();
 
 reverser(tabell);
 
@@ -115,7 +117,7 @@ reverser(tabell);
 		
 		for (int i = 0; i < tabell.length; i ++) {
 			if (tall == i) {
-				System.out.print("verdien til posisjon "+ i + " er " + tabell[i]);
+				System.out.println("verdien til posisjon "+ i + " er " + tabell[i]);
 				tall = tabell[i];
 				break;
 			}
