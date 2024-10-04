@@ -1,4 +1,4 @@
-//package no.hvl.dat100.tabeller;
+package no.hvl.dat100.tabeller;
 
 public class Tabeller {
 
@@ -7,7 +7,12 @@ public class Tabeller {
 	int tabell [] = {1,2,3,4,5,6};
 	
 	 int tabell2[] = {42,67,89};
-	 
+	
+	 if (erSortert(tabell)) {
+			System.out.println("første tabell er stigende");
+		}else {
+			System.out.println("første tabell er ikke stigende");
+		}
 	 
 skrivUt(tabell);
     System.out.println();
@@ -26,6 +31,8 @@ summer(tabell);
 boolean svar = finnesTall(tabell, 3);
 System.out.println(svar);
 
+System.out.println();
+boolean sortert = erSortert(tabell);
 
 posisjonTall(tabell, 7);
 	}
@@ -102,11 +109,6 @@ for (int i = 0; i < tabell.length -1; i++) {
 	}
 	
 	
-	// TODO throw new UnsupportedOperationException("Metoden finnesTall ikke implementert");
-
-	
-	
-	
 // e)
 	
 	public static int posisjonTall(int[] tabell, int tall) {
@@ -139,16 +141,18 @@ for (int i = 0; i < tabell.length -1; i++) {
 	
 	public static boolean erSortert(int[] tabell) {
 
-		for (int i = 0; i < tabell.length;i++) {
-		
-		if (tabell[i] < tabell [i- 1] ) {
+		for (int i = 1; i < tabell.length;i++) {
+	
+			if (tabell[i] < tabell[i-1]) {   // sjekk om nåvarende element er mindre eller lik forrige element
 		
 		  return false;
 		}
-	}
+		}
+	return true;
+	      	}
 	
-	      return true;
-	}
+	
+	
 // h)
 	
 	public static int[] settSammen(int[] tabell1, int[] tabell2) {
