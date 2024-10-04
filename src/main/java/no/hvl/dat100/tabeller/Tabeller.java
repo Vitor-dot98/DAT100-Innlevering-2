@@ -10,7 +10,7 @@ public class Tabeller {
 	
 	 if (erSortert(tabell)) {
 			System.out.println("første tabell er stigende");
-	 }else {
+		}else {
 			System.out.println("første tabell er ikke stigende");
 		}
 	 
@@ -31,13 +31,6 @@ summer(tabell);
 boolean svar = finnesTall(tabell, 3);
 System.out.println(svar);
 
-<<<<<<< HEAD
-=======
-System.out.println();
-boolean sortert = erSortert(tabell);
-System.out.println();
->>>>>>> 9371f0c7681c76532669c74c78ac0a71d226f7c9
-
 posisjonTall(tabell, 4);
 System.out.println();
 
@@ -45,19 +38,15 @@ reverser(tabell);
 
 	}
 	
-	
-	
 // a)
 	
 	public static void skrivUt(int[] tabell) {
 		for (int i = 0; i < tabell.length; i++) {
 			System.out.println(tabell[i]);
-			System.out.println();
+			//System.out.println();
 		}
 		
 	}
-
-
 	
 // b)
 	
@@ -79,8 +68,6 @@ reverser(tabell);
 			
 	}
 	
-	
-	
 //c)
 	
 	    private static int sum = 0;
@@ -93,8 +80,6 @@ reverser(tabell);
 	        return sum;
 	
 	}
-
-   
 	    
 // d)	    
 	    
@@ -113,7 +98,6 @@ reverser(tabell);
 		return false;
 	}
 	
-	
 // e)
 	
 	public static int posisjonTall(int[] tabell, int tall) {
@@ -126,11 +110,7 @@ reverser(tabell);
 			}
 		}
 		return tall;
-
-		
 	}
-
-	
 	
 // f)
 	
@@ -139,12 +119,7 @@ reverser(tabell);
 		int b = 0;
 		for (int i = tabell.length -1; i >= 0; i--) {
 			int a = tabell[i];
-			//System.out.println(a);
-
-			//System.out.println(tabell[a]);
-
-
-			
+	
 			tabell2[b] = a;
 
 			b ++;
@@ -157,8 +132,6 @@ reverser(tabell);
 		return tabell;
 		
 	}
-
-	
 	
 // g)
 	
@@ -173,8 +146,6 @@ reverser(tabell);
 		}
 	return true;
 	      	}
-	
-	
 	
 // h)
 	
