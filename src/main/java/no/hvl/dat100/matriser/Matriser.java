@@ -14,6 +14,7 @@ public class Matriser {
 	System.out.println();
 	
 	int[][] skalert = skaler(8, matrise);
+	System.out.println();
 	
 	int [][] matrise2 = {
 			{1,2,3},
@@ -22,14 +23,16 @@ public class Matriser {
 			
 	};
 	
-	
-	
-	
-	
 	String resultat = tilStreng(matrise2);
-			System.out.println(resultat);
+	System.out.println(resultat);
+ System.out.println();
 	
 	
+	
+	
+
+			
+			
 }
 
 	
