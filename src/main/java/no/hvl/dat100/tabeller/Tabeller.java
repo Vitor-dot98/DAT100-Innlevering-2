@@ -7,14 +7,19 @@ public class Tabeller {
 	int tabell [] = {1,2,3,4,5,6};
 	
 	 int tabell2[] = {42,67,89};
-	 
+	
+	 if (erSortert(tabell)) {
+			System.out.println("første tabell er stigende");
+		}else {
+			System.out.println("første tabell er ikke stigende");
+		}
 	 
 skrivUt(tabell);
-    System.out.println();
+    //System.out.println();
     
     
 System.out.println(tilStreng(tabell2));
-    System.out.println(); 
+    //System.out.println(); 
 
     
     System.out.print("Summen av tallene i tabellen er: ");
@@ -28,6 +33,8 @@ System.out.println();
 System.out.println(svar);
 System.out.println();
 
+System.out.println();
+boolean sortert = erSortert(tabell);
 
 System.out.println("Hva er posisjonen til tallet?: ");
 posisjonTall(tabell, 4);
@@ -115,11 +122,6 @@ System.out.println();
 	}
 	
 	
-	// TODO throw new UnsupportedOperationException("Metoden finnesTall ikke implementert");
-
-	
-	
-	
 // e)
 	
 	public static int posisjonTall(int[] tabell, int tall) {
@@ -141,15 +143,35 @@ System.out.println();
 // f)
 	
 	public static int[] reverser(int[] tabell) {
+
 		int tabellsnudd [] = new int [tabell.length];
 		for (int i = tabell.length - 1; i >= 0; i--) {
 			int ny = tabell[i];
 			tabellsnudd[i] = ny;
+
+		int[] tabell2 = new int[tabell.length];
+		int b = 0;
+		for (int x = tabell.length -1; x >= 0; x--) {
+			int a = tabell[i];
+			//System.out.println(a);
+
+			//System.out.println(tabell[a]);
+
+
+			
+			tabell2[b] = a;
+
+			b ++;
+			}
+		tabell = tabell2;
+		for (int s = 0; s < tabell.length; s++) {
+			System.out.println(tabell[s]);
+
 		}
 		return tabellsnudd;
 			
 		}
-			 
+	} 
 		
 	
 
@@ -159,16 +181,18 @@ System.out.println();
 	
 	public static boolean erSortert(int[] tabell) {
 
-		for (int i = 0; i < tabell.length;i++) {
-		
-		if (tabell[i] < tabell [i- 1] ) {
+		for (int i = 1; i < tabell.length;i++) {
+	
+			if (tabell[i] < tabell[i-1]) {   // sjekk om nåvarende element er mindre eller lik forrige element
 		
 		  return false;
 		}
-	}
+		}
+	return true;
+	      	}
 	
-	      return true;
-	}
+	
+	
 // h)
 	
 	public static int[] settSammen(int[] tabell1, int[] tabell2) {
