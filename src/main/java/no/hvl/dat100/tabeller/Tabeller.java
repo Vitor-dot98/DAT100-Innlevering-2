@@ -31,6 +31,8 @@ summer(tabell);
 boolean svar = finnesTall(tabell, 3);
 System.out.println(svar);
 
+System.out.println();
+
 posisjonTall(tabell, 4);
 System.out.println();
 
