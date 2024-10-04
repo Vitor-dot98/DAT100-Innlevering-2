@@ -27,22 +27,21 @@ System.out.println();
 System.out.println("Finnes tallet i tabellen?");
 boolean svar = finnesTall(tabell, 3);
 System.out.println(svar);
-
 System.out.println();
+
 
 posisjonTall(tabell, 4);
 System.out.println();
+
 
 System.out.println("Tabellen reversert blir");
 reverser(tabell);
 System.out.println();
 
-System.out.println("Er tabellen sortert?");
-if (erSortert(tabell)) {
-	System.out.println("første tabell er stigende");
-}else {
-	System.out.println("første tabell er ikke stigende");
-}
+
+System.out.println("Er tabellen sortert stigendes?");
+boolean Svar = erSortert(tabell);
+System.out.println(svar);
 System.out.println();
 
 
@@ -151,16 +150,14 @@ settSammen(tabell, tabell2);
 	
 	public static boolean erSortert(int[] tabell) {
 
-		for (int i = 1; i < tabell.length;i++) {
-	
-			if (tabell[i] < tabell[i-1]) {  
-		
-		  return false;
-		}
-		}
-	return true;
-	      	}
-	
+		for (int i = 1; i < tabell.length; i++) {
+			if (tabell[i] < tabell[i-1]) {
+	            return false; 
+	        }
+	    }
+	    
+	    return true;  
+	}
 // h)
 	
 	public static int[] settSammen(int[] tabell, int[] tabell2) {
